@@ -1,0 +1,19 @@
+{
+  "tab_title": "АФК Drops & Баллы канала",
+
+  "stories_header": "Интересное",
+
+  "connect_button": "Подключиться",
+  "multiconnect_button": "Мультиконнект",
+  "level_button": "Уровень",
+
+  "faq_button": "FAQ",
+  "support_button": "Техподдержка",
+  "become_partner_button": "Стать партнёром",
+
+  "empty_accounts_list": "Список пуст",
+  "empty_accounts_list_description": "Давай скорее начнём!",
+
+  "connect_info_header": "Фарми твич с выключенным\nустройством и интернетом",
+  "connect_info_second": "Подключение займет меньше 10 секунд"
+}

@@ -1,0 +1,344 @@
+/* Основной экран приложения */
+.main-screen {
+    background: #0E0E0E;
+    position: relative; /* Позиционирование элемента относительно его нормального положения */
+    overflow-y: auto; /* Включаем вертикальную прокрутку, если содержимое экрана выходит за пределы видимой области */
+}
+
+/* Сегмент, содержащий заголовок и блок с кнопками историй */
+.stories-segment {
+    /*padding-left: 5%;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень для создания глубины и визуального отделения сегмента от фона */
+    z-index: 1; /* Устанавливаем индекс слоя, чтобы убедиться, что сегмент выше других элементов, например, разделителя */
+}
+
+/* Стили заголовка */
+.stories-header {
+    color: white;
+    margin: 0 5% 3px;
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    font-weight: 500; /* Устанавливаем среднюю жирность текста */
+    font-size: 20px; /* Размер шрифта 24px */
+}
+
+/* Горизонтальное меню с кнопками историй */
+.stories-scroll-box {
+    position: relative;
+    overflow-x: auto; /* Включаем горизонтальную прокрутку, если элементы не помещаются в видимую область */
+    padding-left: calc(5% + 6px);
+    padding-right: calc(5% - 16px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex; /* Включаем Flexbox для расположения элементов в строку */
+    white-space: nowrap; /* Предотвращаем перенос элементов на новую строку */
+    scrollbar-width: none; /* Отключаем отображение полосы прокрутки в Firefox */
+    -ms-overflow-style: none;  /* Отключаем полосу прокрутки в Internet Explorer */
+    box-sizing: border-box; /* Учитываем отступы и границы в размере контейнера */
+}
+
+/* Скрываем полосу прокрутки в браузерах на основе WebKit */
+.stories-scroll-box::-webkit-scrollbar {
+    display: none; /* Отключаем отображение полосы прокрутки в Chrome, Safari, Opera */
+}
+
+/* Стили для кнопок меню */
+.stories-button {
+    padding: 0; /* Сбрасываем внутренние отступы */
+    margin-right: 16px; /* Отступ справа между кнопками */
+    border-radius: 20px; /* Закругленные углы у кнопки */
+    cursor: pointer; /* Указываем, что элемент кликабелен */
+    flex: 0 0 auto; /* Фиксированный размер кнопок, предотвращаем их сжатие */
+    width: 90px; /* Ширина кнопки 90 */
+    height: 90px; /* Высота кнопки 90 */
+    position: relative; /* Позволяет добавлять абсолютно спозиционированные элементы внутри кнопки */
+    box-sizing: border-box; /* Учитываем границы и отступы в размере кнопки */
+    border: none; /* Убираем стандартную границу кнопки */
+}
+
+/* Стили для изображений в кнопках */
+.stories-button-image {
+    width: 100%; /* Изображение занимает всю ширину кнопки */
+    height: 100%; /* Изображение занимает всю высоту кнопки */
+    object-fit: cover; /* Изображение обрезается по размерам кнопки без искажения */
+    border-radius: 17px; /* Закругленные углы у изображения */
+}
+
+/* Обводка для непросмотренных историй */
+.stories-button.not-read::after {
+    padding-left: 10px;
+    content: ''; /* Добавляем псевдоэлемент после кнопки */
+    position: absolute; /* Абсолютное позиционирование внутри кнопки */
+    top: -6px; /* Смещаем на 5px вверх */
+    left: -6px; /* Смещаем на 5px влево */
+    right: -6px; /* Смещаем на 5px вправо */
+    bottom: -6px; /* Смещаем на 5px вниз */
+    border: 3px solid #1FAEFF; /* Голубая рамка вокруг кнопки */
+    border-radius: 21px; /* Закругленные углы рамки */
+    pointer-events: none; /* Обводка не мешает кликам по кнопке */
+    box-sizing: border-box; /* Учитываем границы и отступы в размере кнопки */
+}
+
+/* Разделительная линия */
+.divider {
+    width: 100%; /* Линия занимает всю ширину экрана */
+    height: 11px; /* Высота линии 10px */
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Сегмент, содержащий кнопки */
+.mainmenu-segment {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень для создания глубины и визуального отделения сегмента от фона */
+}
+
+/* Основная кнопка */
+.connect-button {
+    width: 100%; /* Кнопка занимает всю ширину экрана за вычетом отступов */
+    height: 68px; /* Высота кнопки 50px */
+    margin-bottom: 19px;
+    /*margin: 0 25px 20px 25px; !* Отступы: сверху и слева/справа 25px, снизу 20px *!*/
+    background: linear-gradient(to bottom right, #2a95ff, #346cf8); /* Сине-фиолетовый градиент фона */
+    color: white; /* Белый цвет текста */
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 26px; /* Размер шрифта 18px */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 22px; /* Закругленные углы у кнопки */
+    cursor: pointer; /* Указатель при наведении на кнопку */
+    display: flex; /* Используем Flexbox для центрирования текста */
+    align-items: center; /* Вертикальное центрирование текста */
+    justify-content: center; /* Горизонтальное центрирование текста */
+}
+
+/* Контейнер для маленьких кнопок */
+.secondary-buttons-box {
+    display: flex; /* Включаем Flexbox для расположения маленьких кнопок в строку */
+    justify-content: space-between; /* Размещаем кнопки по обе стороны контейнера */
+    /*margin: 10px 25px; !* Отступы сверху и снизу 10px, слева и справа 25px *!*/
+}
+
+/* Маленькие кнопки */
+.secondary-button {
+    width: calc(50% - 10px); /* Каждая кнопка занимает половину ширины контейнера с учетом промежутка */
+    height: 68px; /* Высота кнопки 50px */
+    background: linear-gradient(to bottom, rgba(72, 173, 255, 0.2), rgba(121, 184, 255, 0.2)); /* Полупрозрачный градиент */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 22px; /* Закругленные углы у кнопки */
+    cursor: pointer; /* Указатель при наведении на кнопку */
+    display: flex; /* Используем Flexbox для центрирования контента */
+    flex-direction: column; /* Вертикальное выравнивание иконки и текста */
+    align-items: center; /* Горизонтальное центрирование контента */
+    justify-content: center; /* Вертикальное центрирование контента */
+    color: #00BFFF; /* Голубой цвет текста */
+}
+
+/* Иконки для маленьких кнопок */
+.button-icon {
+    width: 24px; /* Ширина иконки 24px */
+    height: 24px; /* Высота иконки 24px */
+    margin-bottom: 2px; /* Отступ снизу для текста */
+    fill: #00BFFF; /* Голубой цвет иконки */
+}
+
+/* Текст для маленьких кнопок */
+.secondary-button span {
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+/* Кнопка, занимающая всю ширину контейнера */
+.settings-button {
+    background: #0E0E0E;
+    width: 100%; /* Кнопка занимает всю ширину контейнера */
+    padding: 10px 5%; /* Внутренние отступы: 10px сверху и снизу, 15px слева и справа */
+    border: none; /* Убираем границу кнопки */
+    display: flex; /* Используем Flexbox для выравнивания контента */
+    justify-content: space-between; /* Размещаем контент по обе стороны кнопки */
+    align-items: center; /* Вертикальное центрирование контента */
+    cursor: pointer; /* Указатель при наведении на кнопку */
+    box-sizing: border-box; /* Учитываем отступы и границы в размере кнопки */
+}
+
+/* Контейнер для контента внутри кнопки */
+.settings-button-content {
+    display: flex; /* Используем Flexbox для размещения иконки и текста в строку */
+    align-items: center; /* Вертикальное центрирование контента */
+}
+
+.settings-faq-icon {
+    width: 31px;
+    height: 31px;
+    background-color: #5162FF; /* Цвет фона квадрата */
+    margin-right: 15px;
+    border-radius: 10px; /* Закругление углов */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-support-icon {
+    width: 31px;
+    height: 31px;
+    background-color: #C64BFF; /* Цвет фона квадрата */
+    margin-right: 15px;
+    border-radius: 10px; /* Закругление углов */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.settings-partner-icon {
+    width: 31px;
+    height: 31px;
+    background-color: #EC5959; /* Цвет фона квадрата */
+    margin-right: 15px;
+    border-radius: 10px; /* Закругление углов */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-icon-img {
+    width: 20px;
+    height: 20px;
+}
+
+.settings-faq-icon-img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Текст внутри кнопок меню */
+.settings-button-text {
+    font-size: 17px; /* Размер шрифта 16px */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    font-weight: normal;
+    text-align: left;
+
+}
+
+/* Иконка стрелки в кнопке меню */
+.settings-arrow-img {
+    opacity: 0.25;
+}
+
+/* Разделительная линия между кнопками меню */
+.button-divider {
+    width: 100%; /* Линия занимает всю ширину контейнера */
+    height: 1px; /* Высота линии 1px */
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Убираем разделитель после последней кнопки */
+.settings-button:last-child + .button-divider {
+    display: none; /* Скрываем разделительную линию после последней кнопки */
+}
+
+.settings-buttons-segment {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень для создания глубины и визуального отделения сегмента от фона */
+}
+
+/* Сегмент, содержащий кнопки аккаунтов */
+.accounts-segment {
+
+    /*margin: 20px 0; !* Отступы сверху и снизу 20px *!*/
+}
+
+/* Заголовок сегмента */
+.accounts-segment-title {
+    margin: 15px 5% 10px;
+    font-size: 17px; /* Размер шрифта 18px */
+    font-weight: 450; /* Устанавливаем среднюю жирность текста */
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    color: #79BFFF; /* Темно-серый цвет текста */
+}
+
+/* Кнопки аккаунтов */
+.account-box {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    background: #0E0E0E;
+    width: 100%; /* Кнопка занимает всю ширину контейнера */
+
+    /*padding: 15px; !* Внутренние отступы 15px со всех сторон *!*/
+    border: none; /* Убираем границу кнопки */
+    display: flex; /* Используем Flexbox для выравнивания контента */
+    justify-content: space-between; /* Размещаем контент по обе стороны кнопки */
+    align-items: center; /* Вертикальное центрирование контента */
+    cursor: pointer; /* Указатель при наведении на кнопку */
+    box-sizing: border-box; /* Учитываем отступы и границы в размере кнопки */
+}
+
+/* Левая часть кнопки с иконкой и текстом */
+.account-info {
+    display: flex; /* Используем Flexbox для размещения иконки и текста в строку */
+    align-items: center; /* Вертикальное центрирование контента */
+    text-align: left;
+}
+
+/* Иконки для кнопок аккаунтов */
+.account-icon {
+    width: 45px; /* Ширина иконки 40px */
+    height: 45px; /* Высота иконки 40px */
+    margin-right: 14px; /* Отступ справа от текста */
+    fill: rgb(52, 53, 80); /* Темно-серый цвет иконки */
+
+}
+
+/*!* Стили для SVG иконок *!*/
+/*.account-icon svg {*/
+/*    width: 100%; !* Ширина SVG иконки равна ширине контейнера *!*/
+/*    height: 100%; !* Высота SVG иконки равна высоте контейнера *!*/
+/*    fill: rgb(52, 53, 80); !* Темно-серый цвет иконки *!*/
+/*}*/
+
+/* Контейнер для текста в кнопке аккаунта */
+.account-text {
+    display: flex; /* Используем Flexbox для вертикального размещения названия и описания */
+    flex-direction: column; /* Размещаем текстовые элементы в колонку */
+}
+
+/* Название аккаунта */
+.account-name {
+    font-size: 18px; /* Размер шрифта 16px */
+    color: #ffffff; /* Темно-серый цвет текста */
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+}
+
+/* Описание аккаунта */
+.account-mode {
+    font-size: 14px; /* Размер шрифта 14px */
+    color: rgba(255, 255, 255, 0.45); /* Темно-серый цвет текста с 50% непрозрачностью */
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+}
+
+/* Правая часть кнопки с датой и временем */
+.account-date-box {
+    display: flex; /* Используем Flexbox для вертикального размещения даты и времени */
+    flex-direction: column; /* Размещаем текстовые элементы в колонку */
+    align-items: flex-end; /* Выравниваем текст по правому краю */
+    text-align: right;
+
+}
+
+/* Дата в кнопке аккаунта */
+.account-date {
+    font-size: 18px; /* Размер шрифта 16px */
+    color: #ffffff; /* Темно-серый цвет текста */
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+}
+
+/* Время в кнопке аккаунта */
+.account-time {
+    font-size: 14px; /* Размер шрифта 14px */
+    color: rgba(255, 255, 255, 0.45); /* Темно-серый цвет текста с 50% непрозрачностью */
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+}

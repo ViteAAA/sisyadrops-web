@@ -1,0 +1,35 @@
+/* Основной экран приложения */
+.main-screen {
+    background: #0E0E0E;
+    position: relative; /* Позиционирование элемента относительно его нормального положения */
+    overflow-y: auto; /* Включаем вертикальную прокрутку, если содержимое экрана выходит за пределы видимой области */
+}
+
+.info-box {
+    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-left: 5%;
+
+}
+
+.connect-info-header {
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    font-weight: 400; /* Устанавливаем среднюю жирность текста */
+    font-size: 20px; /* Размер шрифта 24px */
+}
+
+.connect-info-second {
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    font-weight: 400; /* Устанавливаем среднюю жирность текста */
+    font-size: 16px; /* Размер шрифта 24px */
+    opacity: 0.75;
+}
+
+/* Разделительная линия */
+.divider {
+    width: 100%; /* Линия занимает всю ширину экрана */
+    height: 11px; /* Высота линии 10px */
+    background-color: rgba(255, 255, 255, 0.12);
+}

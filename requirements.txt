@@ -1,0 +1,5 @@
+react-router-dom
+react-transition-group
+react-insta-stories
+i18next
+react-i18next
