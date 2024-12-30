@@ -96,6 +96,12 @@ const MainScreen = () => {
 
     };
 
+    //добавил для себя
+    const handleButtonNextPage = (loginPage) => {
+        navigate('/Login', { state: { loginPage } });
+
+    };
+
     return (
         <div className="main-screen">
 
@@ -119,7 +125,7 @@ const MainScreen = () => {
 
             {/* Главное меню */}
             <div className="mainmenu-segment">
-                <button className="connect-button" onClick={() => handleConnectButtonClick()}>{t('connect_button')}</button>
+                <button className="connect-button" onClick={() => /*handleConnectButtonClick()*/ handleButtonNextPage()}>{t('connect_button')}</button>
                 <div className="secondary-buttons-box">
                     <button className="secondary-button">
                         <img src={multiConnectIcon} alt="Multi Connect Icon" className="button-icon"/>

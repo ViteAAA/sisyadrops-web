@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import MainScreen from './MainScreen.jsx';
 import StoriesPage from './StoriesPage.jsx';
+import Login from './Login.jsx';
 import './App.css';
 import ConnectScreen from "@/ConnectScreen.jsx";
 
@@ -20,6 +21,7 @@ const AnimatedRoutes = () => {
                         <Route path="/" element={<MainScreen />} />
                         <Route path="/stories" element={<StoriesPage />} />
                         <Route path="/connectScreen" element={<ConnectScreen />} />
+                        <Route path="/login" element={<Login />} /> {/* Определите маршрут для /Login */}
                     </Routes>
                 </CSSTransition>
             </TransitionGroup>
