@@ -1,7 +1,47 @@
-p {
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
+.container {
+    max-width: 369px;
+    margin: 0 auto;
+    padding-top: 26px;
+}
+
+
+
+.nickname-cont__label {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a9ddb; 
+}
+.nickname-cont__span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #db4a4a;
+    display: none;
+}
+
+.nickname-cont input {
+    margin-top: 7px;
+    margin-bottom: 6px;
+    border: 3px solid #4a9ddb;
+    border-radius: 20px;
+    padding: 14px 22px;
+    background: rgba(86, 164, 255, 0.1);
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: rgba(74, 157, 219);
+    width: 320px;
+}
+
+.switch-cont {
+    margin-top: 23px;
+}
+
+.switch-label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a9ddb;
 }
