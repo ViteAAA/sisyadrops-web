@@ -34,6 +34,14 @@
     color: rgba(74, 157, 219);
     width: 320px;
 }
+.nickname-cont__input::placeholder {
+    color: rgba(74, 157, 219, 0.39); /* Цвет для валидного состояния */
+    opacity: 1; 
+}
+
+.nickname-cont__input.invalid::placeholder {
+    color: rgba(219, 74, 74, 0.39); /* Цвет для невалидного состояния */
+}
 
 .switch-cont {
     margin-top: 23px;
@@ -44,4 +52,44 @@
     font-weight: 600;
     font-size: 22px;
     color: #4a9ddb;
+}
+
+.game-cont {
+    width: 100%;
+    margin-top: 23px;
+}
+
+.game__text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a9ddb;
+    margin-bottom: 7px;
+}
+
+.game__btn {
+    width: 100%;
+    border: 3px solid #4a9ddb;
+    border-radius: 20px;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 22px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #4a9ddb;
+}
+
+.complite-btn {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    color: #fff;
+    width: 100%;
+    border-radius: 20px;
+    background: #0f98e5;
+    padding: 14px 0;
+    border: none;
+    margin-top: 125px;
 }
