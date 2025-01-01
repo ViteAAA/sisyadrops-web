@@ -67,7 +67,7 @@
     margin-bottom: 7px;
 }
 
-.game__btn {
+.game__button {
     width: 100%;
     border: 3px solid #4a9ddb;
     border-radius: 20px;
@@ -81,7 +81,7 @@
     color: #4a9ddb;
 }
 
-.complite-btn {
+.complite-button {
     font-family: "Rubik", sans-serif;
     font-weight: 600;
     font-size: 34px;

@@ -1,0 +1,102 @@
+.case {
+    border-radius: 27px;
+    padding: 5px 6px;
+    position: relative;
+    background: none !important;
+}
+
+.case-background {
+    background: linear-gradient(135deg, #03b3ff 0%, #5a31ff 100%);
+    border-radius: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.09;
+}
+
+.case-container {
+    border: 4px solid rgba(120, 132, 138, 0.15);
+    border-radius: 23px;
+    padding: 16px 14px 13px 13px;
+    background: none;
+    position: relative;
+    z-index: 10;
+}
+
+.case-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 4px;
+    padding-left: 9px;
+}
+
+.case-list {
+    list-style: none;
+    padding-left: 23px;
+}
+
+.case-list-item {
+    margin-bottom: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #fff;
+}
+.case-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.checkmark {
+    color: white;
+    margin-right: 5px;
+}
+
+.case-button {
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    background: none;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #42bbff;
+    position: relative;
+}
+
+.case-button-background {
+    background: #0f98e5;
+    opacity: 0.15;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+
+.case-price {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+    color: #fff;
+    margin-top: 35px;
+}
+
+.case-ps {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
+    opacity: 0.5;
+    margin-bottom: 14px;
+}

@@ -67,13 +67,13 @@ const Login = () => {
           <p className="game__text">
             Игра
           </p>
-          <button className="game__btn">
+          <button className="game__button">
             Stalcraft
             <span><img src={arrowBtn} alt="arrow" /></span>
           </button>
         </div>
 
-        <button className="complite-btn" onClick={handleClick}>
+        <button className="complite-button" onClick={handleClick}>
           Продолжить
         </button>
       </div>
