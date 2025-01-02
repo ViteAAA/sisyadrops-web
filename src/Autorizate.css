@@ -1,4 +1,7 @@
-
+  .auth-container {
+    padding-top: 150px;
+    margin-bottom: 200px;
+  }
 
   .container-outsider .auth-title {
     font-family: "Roboto", sans-serif;
@@ -17,6 +20,7 @@
   }
   
   .code-container {
+    
     background: linear-gradient(178deg, rgba(17, 169, 255, 0.25) 0%, rgba(189, 49, 255, 0.25) 100%);
     padding: 19px 26px 19px 23px;
     border: 3px solid #4ab3ff;

@@ -38,48 +38,46 @@ const Login = () => {
   };
 
   return (
-    <div className="main-screen ">
-      <div className="info-box">
-        <h2 className="connect-info-header">{t('connect_info_header')}</h2>
-        <h4 className="connect-info-second">{t('connect_info_second')}</h4>
-      </div>
-
-      <div className="divider"></div>
-
-      <div className="container-outsider">
-        <div className="nickname-container">
-          <label htmlFor="nickname" className="nickname-container__label" style={{ color: inputColor }}>Твой никнейм на твиче</label>
-          <input
-            type="text"
-            id="nickname"
-            placeholder="Username"
-            value={nickname}
-            onChange={(e) => setNickname(e.target.value)}
-            style={{ borderColor: inputColor, backgroundColor: inputBack }}
-            className={`nickname-container__input ${isValid ? '' : 'invalid'}`}
-          />
-          <label htmlFor="nickname" className="nickname-container__span" style={{ display: isValid ? 'none' : 'block' }}>Укажите никнейм</label>
+    <div className="main-screen">
+        <div className="info-box">
+            <h2 className="connect-info-header">{t('connect_info_header')}</h2>
+            <h4 className="connect-info-second">{t('connect_info_second')}</h4>
         </div>
 
-        <div className="switch-container">
-          <label className="switch-label">Режим фарма</label>
-          <Switch />
-        </div>
+        <div className="divider"></div>
 
-        <div className="game-container">
-          <p className="game__text">
-            Игра
-          </p>
-          <button className="game__button">
-            Stalcraft
-            <span><img src={arrowBtn} alt="arrow" /></span>
-          </button>
-        </div>
+        <div className="container-outsider">
+            <div className="nickname-container">
+                <label htmlFor="nickname" className="nickname-container__label" style={{ color: inputColor }}>{t('nickname_label')}</label>
+                <input
+                    type="text"
+                    id="nickname"
+                    placeholder={t('nickname_placeholder')}
+                    value={nickname}
+                    onChange={(e) => setNickname(e.target.value)}
+                    style={{ borderColor: inputColor, backgroundColor: inputBack }}
+                    className={`nickname-container__input ${isValid ? '' : 'invalid'}`}
+                />
+                <label htmlFor="nickname" className="nickname-container__span" style={{ display: isValid ? 'none' : 'block' }}>{t('nickname_error')}</label>
+            </div>
 
-        <button className="complite-button" onClick={handleClick}>
-          Продолжить
-        </button>
-      </div>
+            <div className="switch-container">
+                <label className="switch-label">{t('farm_mode_label')}</label>
+                <Switch />
+            </div>
+
+            <div className="game-container">
+                <p className="game__text">{t('game_text')}</p>
+                <button className="game__button">
+                    {t('game_button')}
+                    <span><img src={arrowBtn} alt="arrow" /></span>
+                </button>
+            </div>
+
+            <button className="complite-button" onClick={handleClick}>
+                {t('continue_button')}
+            </button>
+        </div>
     </div>
   );
 }
