@@ -5,6 +5,7 @@ import MainScreen from './MainScreen.jsx';
 import StoriesPage from './StoriesPage.jsx';
 import Login from './Login.jsx';
 import Access from './Access.jsx'
+import Autorizate from './Autorizate.jsx';
 import './App.css';
 import ConnectScreen from "@/ConnectScreen.jsx";
 
@@ -25,6 +26,7 @@ const AnimatedRoutes = () => {
                         <Route path="/connectScreen" element={<ConnectScreen />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/access" element={<Access />} />
+                        <Route path="/autorizate" element={<Autorizate />} />
                     </Routes>
                 </CSSTransition>
             </TransitionGroup>

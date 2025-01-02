@@ -4,16 +4,18 @@
     padding-top: 26px;
 }
 
+.nickname-container {
+    width: 100%;
+}
 
-
-.nickname-cont__label {
+.nickname-container__label {
     display: block;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 22px;
     color: #4a9ddb; 
 }
-.nickname-cont__span {
+.nickname-container__span {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -21,7 +23,7 @@
     display: none;
 }
 
-.nickname-cont input {
+.nickname-container input {
     margin-top: 7px;
     margin-bottom: 6px;
     border: 3px solid #4a9ddb;
@@ -32,20 +34,19 @@
     font-weight: 500;
     font-size: 22px;
     color: rgba(74, 157, 219);
-    width: 320px;
+    width: 100%;
+    box-sizing: border-box;
 }
-.nickname-cont__input::placeholder {
+.nickname-container__input::placeholder {
     color: rgba(74, 157, 219, 0.39); /* Цвет для валидного состояния */
     opacity: 1; 
 }
 
-.nickname-cont__input.invalid::placeholder {
+.nickname-container__input.invalid::placeholder {
     color: rgba(219, 74, 74, 0.39); /* Цвет для невалидного состояния */
 }
 
-.switch-cont {
-    margin-top: 23px;
-}
+
 
 .switch-label {
     font-family: "Roboto", sans-serif;
@@ -54,9 +55,8 @@
     color: #4a9ddb;
 }
 
-.game-cont {
+.game-container {
     width: 100%;
-    margin-top: 23px;
 }
 
 .game__text {
@@ -79,6 +79,12 @@
     font-weight: 500;
     font-size: 22px;
     color: #4a9ddb;
+    align-items: center;
+}
+
+.game__button span {
+    display: flex;
+    align-items: center;
 }
 
 .complite-button {

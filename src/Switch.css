@@ -47,7 +47,7 @@
     top: 4px;
     left: 5px;
     border-radius: 20px;
-    width: 159px;
+    width: 44.29%;
     height: 87px;
     background: linear-gradient(154deg, rgba(0, 163, 255, 0.2) 0%, rgba(206, 103, 255, 0.2) 100%);
     transition: left 0.3s;
@@ -58,5 +58,5 @@
 }
 
 .indicator.right {
-    left: 55%;
+    left: 54.45%;
 }

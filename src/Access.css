@@ -1,7 +1,12 @@
-.container {
-    max-width: 369px;
+.container-outsider {
+    max-width: 85.735%;
     margin: 0 auto;
     padding-top: 47px;
+}
+
+.switch-container {
+    max-width: 369px;
+    margin: 23px auto;
 }
 
 body {

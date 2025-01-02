@@ -15,6 +15,7 @@ const Login = () => {
 
   const [nickname, setNickname] = useState('');
   const [inputColor, setInputColor] = useState('');
+  const [inputBack, setInputBack] = useState('');
   const [isValid, setIsValid] = useState(true);
 
   const validateNickname = () => {
@@ -24,10 +25,12 @@ const Login = () => {
   const handleClick = () => {
     if (validateNickname()) {
       setInputColor('#4a9ddb');
+      setInputBack('rgba(86, 164, 255, 0.1)');
       navigate('/access');
       setIsValid(true);
       console.log('correct');
     } else {
+      setInputBack('rgba(219, 74, 74, 0.1)');
       setInputColor('#db4a4a');
       setIsValid(false);
       console.log('incorrect');
@@ -43,27 +46,27 @@ const Login = () => {
 
       <div className="divider"></div>
 
-      <div className="container">
-        <div className="nickname-cont">
-          <label htmlFor="nickname" className="nickname-cont__label" style={{ color: inputColor }}>Твой никнейм на твиче</label>
+      <div className="container-outsider">
+        <div className="nickname-container">
+          <label htmlFor="nickname" className="nickname-container__label" style={{ color: inputColor }}>Твой никнейм на твиче</label>
           <input
             type="text"
             id="nickname"
             placeholder="Username"
             value={nickname}
             onChange={(e) => setNickname(e.target.value)}
-            style={{ borderColor: inputColor }}
-            className={`nickname-cont__input ${isValid ? '' : 'invalid'}`}
+            style={{ borderColor: inputColor, backgroundColor: inputBack }}
+            className={`nickname-container__input ${isValid ? '' : 'invalid'}`}
           />
-          <label htmlFor="nickname" className="nickname-cont__span" style={{ display: isValid ? 'none' : 'block' }}>Укажите никнейм</label>
+          <label htmlFor="nickname" className="nickname-container__span" style={{ display: isValid ? 'none' : 'block' }}>Укажите никнейм</label>
         </div>
 
-        <div className="switch-cont">
+        <div className="switch-container">
           <label className="switch-label">Режим фарма</label>
           <Switch />
         </div>
 
-        <div className="game-cont">
+        <div className="game-container">
           <p className="game__text">
             Игра
           </p>
