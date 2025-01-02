@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import "./ConnectScreen.css";
 import './Login.css';
 import Switch from './Switch.jsx';
+import { GameContext } from './ChooseGame/GameContext';
 
 import arrowBtn from './assets/arrow.svg';
 
@@ -17,6 +18,7 @@ const Login = () => {
   const [inputColor, setInputColor] = useState('');
   const [inputBack, setInputBack] = useState('');
   const [isValid, setIsValid] = useState(true);
+  const { selectedGame } = useContext(GameContext);
 
   const validateNickname = () => {
     return nickname.trim() !== '';
@@ -67,9 +69,9 @@ const Login = () => {
             </div>
 
             <div className="game-container">
-                <p className="game-text">{t('game_text')}</p>
-                <button className="game-button">
-                    {t('game_button')}
+                <p className="game-text">{t("game_text")}</p>
+                <button className="game-button" onClick={() => navigate('/game')}>
+                    {t(selectedGame)}
                     <span><img src={arrowBtn} alt="arrow" /></span>
                 </button>
             </div>
