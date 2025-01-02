@@ -174,3 +174,13 @@
     padding: 4px 17px 6px 18px;
     display: none;
 }
+
+@media screen and (max-width: 360px) {
+    .case-price {
+        display: block !important;
+    }
+    .case-price span {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

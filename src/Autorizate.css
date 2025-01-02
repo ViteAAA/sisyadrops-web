@@ -53,7 +53,7 @@
   
   .button-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
   }
   
@@ -70,6 +70,14 @@
     border-radius: 20px;
     cursor: pointer;
     position: relative;
+  }
+
+  .help-button {
+    margin-right: 10px;
+  }
+
+  .cancel-button {
+    margin-left: 10px;
   }
   
 .help-button div,

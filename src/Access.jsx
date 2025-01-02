@@ -23,7 +23,7 @@ const Access = () => {
     return (
         <div className="container-outsider">
             <div className="container">
-            <h1 className="access__title">
+            <h1 className="access-title">
                 {t('access_title')}
             </h1>
                 <div className="access-cases-container">

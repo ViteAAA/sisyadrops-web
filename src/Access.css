@@ -13,11 +13,12 @@ body {
     background: #0e0e0e;
 }
 
-.access__title {
+.access-title {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 23px;
     color: #fff;
+    padding-top: 47px;
 }
 
 .access-cases-container {

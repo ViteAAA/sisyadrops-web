@@ -48,7 +48,7 @@ const Login = () => {
 
         <div className="container-outsider">
             <div className="nickname-container">
-                <label htmlFor="nickname" className="nickname-container__label" style={{ color: inputColor }}>{t('nickname_label')}</label>
+                <label htmlFor="nickname" className="nickname-container-label" style={{ color: inputColor }}>{t('nickname_label')}</label>
                 <input
                     type="text"
                     id="nickname"
@@ -56,9 +56,9 @@ const Login = () => {
                     value={nickname}
                     onChange={(e) => setNickname(e.target.value)}
                     style={{ borderColor: inputColor, backgroundColor: inputBack }}
-                    className={`nickname-container__input ${isValid ? '' : 'invalid'}`}
+                    className={`nickname-container-input ${isValid ? '' : 'invalid'}`}
                 />
-                <label htmlFor="nickname" className="nickname-container__span" style={{ display: isValid ? 'none' : 'block' }}>{t('nickname_error')}</label>
+                <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block' }}>{t('nickname_error')}</label>
             </div>
 
             <div className="switch-container">
@@ -67,8 +67,8 @@ const Login = () => {
             </div>
 
             <div className="game-container">
-                <p className="game__text">{t('game_text')}</p>
-                <button className="game__button">
+                <p className="game-text">{t('game_text')}</p>
+                <button className="game-button">
                     {t('game_button')}
                     <span><img src={arrowBtn} alt="arrow" /></span>
                 </button>
