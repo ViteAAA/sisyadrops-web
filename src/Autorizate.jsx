@@ -13,6 +13,10 @@ const Autorizate = () => {
     const clikcButtonCancel = () => {
         navigate('/');
     }
+
+    const clickButtonHelp = () => {
+        navigate('/support', { state: "3" });
+    }
     
     const copyText = (text) => {
         navigator.clipboard.writeText(text);
@@ -40,7 +44,7 @@ const Autorizate = () => {
                     </div>
                 </div>
                 <div className="button-container">
-                    <button className="help-button">{t("help_button")}<div></div></button>
+                    <button className="help-button" onClick={clickButtonHelp}>{t("help_button")}<div></div></button>
                     <button className="cancel-button" onClick={clikcButtonCancel}>{t("cancel_button")}<div></div></button>
                 </div>
             </div>

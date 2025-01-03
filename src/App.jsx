@@ -9,6 +9,7 @@ import Access from './Access.jsx'
 import Autorizate from './Autorizate.jsx';
 import Accaunt from './Accaunt.jsx';
 import Game from './ChooseGame/ChooseGame.jsx';
+import Support from './TechScreens/TechScreen.jsx';
 import './App.css';
 import ConnectScreen from "@/ConnectScreen.jsx";
 
@@ -32,6 +33,7 @@ const AnimatedRoutes = () => {
                         <Route path="/autorizate" element={<Autorizate />} />
                         <Route path="/accaunt" element={<Accaunt />} />
                         <Route path="/game" element={<Game />} />
+                        <Route path="/support" element={<Support />} />
                     </Routes>
                 </CSSTransition>
             </TransitionGroup>

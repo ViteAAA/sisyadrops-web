@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ImgWithHeaders from './ImgWithHeaders'; // Этот компонент уже существует
 import Button from './Button'; // Этот компонент уже существует
 import './TechScreen.css'; // Импортируем стили для приложения
@@ -9,6 +10,8 @@ const TechScreen = () => {
   const location = useLocation();
   const state = location.state;
   const { t } = useTranslation();
+
+  const navigate = useNavigate();
   // Определяем, какое состояние передано
   const isSpecialState = state !== undefined && state !== null && state === 2; // Например, состояние 3 — особое
   const variants={
@@ -42,8 +45,8 @@ const TechScreen = () => {
           </div>
         ) : (
           <div className='div-with-buttons'>
-            <Button text={t(variants[state].btn1)} onClick={() => alert('Button 1 Clicked!')} />
-            <Button text={t(variants[state].btn2)} onClick={() => alert('Button 2 Clicked!')} />
+            <Button text={t(variants[state].btn1)}  />
+            <Button text={t(variants[state].btn2)} onClick={() => navigate('/')} />
           </div>
         )}
     </div>

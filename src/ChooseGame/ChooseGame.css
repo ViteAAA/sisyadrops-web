@@ -1,5 +1,5 @@
 .choose-game-component {
-    background-color: black;
+    background: #0e0e0e;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,5 +1,7 @@
 .button-for-save {
     width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     height: 68px;
     border-radius: 20px;
     border: none;

@@ -18,7 +18,65 @@ const Login = () => {
   const [inputColor, setInputColor] = useState('');
   const [inputBack, setInputBack] = useState('');
   const [isValid, setIsValid] = useState(true);
+  const[nameOfClass,setNameOfClass]=useState("");
+
+
+
+  const [isHaveThisUsernameInYourAccount, setIsHaveThisUsernameInYourAccount] = useState(false);
+  const [isHaveThisUsername, setIsHaveThisUsername] = useState(false);
+
   const { selectedGame, setSelectedGame } = useContext(GameContext);
+  const usernameExistForTest = "Username";
+  const usernameNotExistForTest = "Twitch";
+
+
+  const nameOfClasses={
+    1:"",
+    2:"invalid-label-for-input",
+    3:"invalid-label-for-input",
+    4:"already-have-label-for-input"
+  };
+  const [NumbOfWarn, setNumbOfWarn] = useState(null);
+
+  const checkNickname=()=>{
+    if(validateNickname()){
+        if(nickname.trim()===usernameExistForTest/*сюда добавите функцию на проверку с бд об этом объекте*/){
+            return 4;
+        }else if(nickname.trim()===usernameNotExistForTest){
+          return 3;
+        }
+        return 1;
+    }
+    return 2;
+  }
+
+
+  const сlickComplite = () => {
+    setNumbOfWarn(checkNickname());
+    if (NumbOfWarn===1) {
+      setInputColor('#4a9ddb');
+      setInputBack('rgba(86, 164, 255, 0.1)');
+      navigate('/access');
+      setIsValid(true);
+      console.log('correct');
+    }else if(NumbOfWarn===2){
+      setInputBack('rgba(219, 74, 74, 0.1)');
+      setInputColor('#db4a4a');
+      setIsValid(false);
+      console.log('incorrect');
+    }else if(NumbOfWarn===3){
+      setInputBack('rgba(219, 74, 74, 0.1)');
+      setInputColor('#db4a4a');
+      setIsHaveThisUsername(true);
+      console.log("It's not your username!");
+    }else if(NumbOfWarn===4){
+      setInputBack("rgba(190, 126, 254, 0.1)");
+      setInputColor('#be7efe');
+      setIsHaveThisUsernameInYourAccount(true);
+      console.log("We have this username in your account");
+    }
+  };
+
 
   const validateNickname = () => {
     return nickname.trim() !== '';
@@ -59,14 +117,14 @@ const Login = () => {
               <div className="nickname-container">
                   <label htmlFor="nickname" className="nickname-container-label" style={{ color: inputColor }}>{t('nickname_label')}</label>
                   <input
-                      type="text"
-                      id="nickname"
-                      placeholder={t('nickname_placeholder')}
-                      value={nickname}
-                      onChange={(e) => setNickname(e.target.value)}
-                      style={{ borderColor: inputColor, backgroundColor: inputBack }}
-                      className={`nickname-container-input ${isValid ? '' : 'invalid'}`}
-                  />
+                    type="text"
+                    id="nickname"
+                    placeholder={t('nickname_placeholder')}
+                    value={nickname}
+                    onChange={(e) => setNickname(e.target.value)}
+                    style={{ borderColor: inputColor, backgroundColor: inputBack }}
+                    className={`nickname-container-input ${isValid ? '' : 'invalid'}`}
+                />
                   <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block' }}>{t('nickname_error')}</label>
               </div>
 
