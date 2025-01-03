@@ -50,12 +50,19 @@
     font-weight: 500;
     font-size: 24px;
     color: #4ab3ff;
+    display: flex;
+    align-items: center;
   }
 
-  .code-container-href img {
-    margin-top: 50%;
-    transform: translateY(0, -50%);
+  .code-container a {
+    display: flex;
+    align-items: end;
   }
+
+  /* .code-container-href img {
+    
+    transform: translate(0, -50%);
+  } */
   
   .code {
     font-family: monospace;
@@ -108,4 +115,11 @@
     background: #0f98e5;
     opacity: 0.25;
     border-radius: 20px;
+}
+
+@media screen and (max-width: 390px) {
+  .button-container button {
+    padding: 21px 0 19px 0;
+    text-align: center;
+  }
 }

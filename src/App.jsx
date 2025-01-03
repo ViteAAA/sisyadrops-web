@@ -7,7 +7,7 @@ import StoriesPage from './StoriesPage.jsx';
 import Login from './Login.jsx';
 import Access from './Access.jsx'
 import Autorizate from './Autorizate.jsx';
-import Accaunt from './Accaunt.jsx';
+import Accaunt from './Account.jsx';
 import Game from './ChooseGame/ChooseGame.jsx';
 import Support from './TechScreens/TechScreen.jsx';
 import './App.css';

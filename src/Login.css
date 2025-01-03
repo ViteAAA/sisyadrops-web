@@ -4,7 +4,14 @@
     padding-top: 26px;
 }
 
+.login-info-box {
+    margin-left: 7.135% !important;
+    width: 90%;
+}
 
+.connect-info-second {
+    margin-top: 16px;
+}
 
 .main-screen {
     height: 100vh;
@@ -54,16 +61,33 @@
     color: rgba(74, 157, 219);
     width: 100%;
     box-sizing: border-box;
+    outline: none; /* Убирает стандартное выделение */
+    box-shadow: none; /* Убирает тень, если она есть */
 }
 .nickname-container-input::placeholder {
     color: rgba(74, 157, 219, 0.39); /* Цвет для валидного состояния */
     opacity: 1; 
 }
 
+.nickname-container-input:focus {
+    border: 3px solid #4a9ddb;
+}
+
+.input-invalid:focus {
+    border: 3px solid #4a9ddb;
+}
+
+.input-account:focus {
+    border: 3px solid #4a9ddb;
+}
+
+.input-empty:focus {
+    border: 3px solid #4a9ddb;
+}
+
 .nickname-container-input.invalid::placeholder {
     color: rgba(219, 74, 74, 0.39); /* Цвет для невалидного состояния */
 }
-
 
 
 .switch-label {

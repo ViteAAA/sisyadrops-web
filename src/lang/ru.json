@@ -23,6 +23,8 @@
   "nickname_label": "Твой никнейм на твиче",
   "nickname_placeholder": "Username",
   "nickname_error": "Укажите никнейм",
+  "nickname_error-1": "Аккаунта с таким никнеймом не существует",
+  "nickname_error-2": "Аккаунт уже подключен",
   "farm_mode_label": "Режим фарма",
   "game_text": "Игра",
   "game_button": "Stalcraft",
@@ -71,7 +73,7 @@
   "auth_href": "twitch.tv/activate",
   "auth_text": "И авторизируйтесь с ним на странице активации твича:",
   "auth_connect": "Чтобы завершить подключение, скопируйте этот код",
-  "twitch_auth": "Авторизация на Twitch",
+  "twitch_auth": "Авторизация на Твиче",
   "help_button": "Помощь",
   "cancel_button": "Отмена",
 

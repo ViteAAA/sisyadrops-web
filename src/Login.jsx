@@ -25,6 +25,12 @@ const Login = () => {
   const [isHaveThisUsernameInYourAccount, setIsHaveThisUsernameInYourAccount] = useState(false);
   const [isHaveThisUsername, setIsHaveThisUsername] = useState(false);
 
+  const [instucction, setInstucction] = useState(false);
+
+  const [emptyNickname, setEmptyNickname] = useState(false);
+
+  const [activeClass, setActiveClass] = useState('');
+
   const { selectedGame, setSelectedGame } = useContext(GameContext);
   const usernameExistForTest = "Username";
   const usernameNotExistForTest = "Twitch";
@@ -103,9 +109,47 @@ const Login = () => {
     }
   };
 
+  
+
+  const compliteButton = () => {
+    if (nickname.trim() === 'red') {
+      setInputBack('rgba(219, 74, 74, 0.1)');
+      setInputColor('#db4a4a');
+      setIsValid(false);
+      console.log('incorrect');
+      setInstucction(t('nickname_error-2'));
+      setIsValid(false);
+      setEmptyNickname(false);
+      setActiveClass('input-invalid');
+    } else if (nickname.trim() === 'purple') {
+      setInputBack("rgba(190, 126, 254, 0.1)");
+      setInputColor('#be7efe');
+      setIsHaveThisUsernameInYourAccount(true);
+      setEmptyNickname(false);
+      setInstucction(t('nickname_error-1'));
+      setIsValid(false);
+      setActiveClass('input-accounts');
+      console.log("We have this username in your account");
+    } else if (nickname.trim() === '') {
+      setInputBack('rgba(190, 126, 254, 0.1)');
+      setInputColor('#db4a4a');
+      setIsHaveThisUsername(true);
+      setEmptyNickname('#be7efe');
+      setInstucction(t('nickname_error'));
+      setIsValid(false);
+      setActiveClass('input-empty');
+      console.log("It's not your username!");
+      
+    }
+    else {
+      setIsValid(true);
+      navigate('/access');
+    }
+  }
+
   return (
     <div className="main-screen">
-        <div className="info-box">
+        <div className="info-box login-info-box">
             <h2 className="connect-info-header">{t('connect_info_header')}</h2>
             <h4 className="connect-info-second">{t('connect_info_second')}</h4>
         </div>
@@ -123,9 +167,9 @@ const Login = () => {
                     value={nickname}
                     onChange={(e) => setNickname(e.target.value)}
                     style={{ borderColor: inputColor, backgroundColor: inputBack }}
-                    className={`nickname-container-input ${isValid ? '' : 'invalid'}`}
+                    className={`nickname-container-input ${isValid ? '' : 'invalid'}, ${activeClass}`}  
                 />
-                  <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block' }}>{t('nickname_error')}</label>
+                  <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block', color: inputColor }}>{instucction}</label>
               </div>
 
               <div className="switch-container">
@@ -141,7 +185,7 @@ const Login = () => {
                   </button>
               </div>
 
-              <button className="complite-button" onClick={handleClick}>
+              <button className="complite-button" onClick={compliteButton}>
                   {t('continue_button')}
               </button>
             </div>

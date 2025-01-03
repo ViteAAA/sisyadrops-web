@@ -13,7 +13,7 @@
 
 .indicator-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     position: relative;
 }
@@ -54,7 +54,7 @@
     top: 0;
     left: 0;
     border-radius: 20px;
-    width: 159px;
+    width: 50%;
     height: 100%;
     background: linear-gradient(154deg, rgba(0, 163, 255, 0.2) 0%, rgba(206, 103, 255, 0.2) 100%);
     transition: left 0.3s;
