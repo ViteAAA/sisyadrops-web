@@ -7,8 +7,15 @@
     border: 3px solid #4a9ddb;
     border-radius: 27px;
     cursor: pointer;
-    position: relative;
     margin-top: 6px;
+    padding: 4px 5px;
+}
+
+.indicator-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
 }
 
 .switch-text {
@@ -44,19 +51,29 @@
 
 .indicator {
     position: absolute;
-    top: 4px;
-    left: 5px;
+    top: 0;
+    left: 0;
     border-radius: 20px;
-    width: 44.29%;
-    height: 87px;
+    width: 159px;
+    height: 100%;
     background: linear-gradient(154deg, rgba(0, 163, 255, 0.2) 0%, rgba(206, 103, 255, 0.2) 100%);
     transition: left 0.3s;
 }
 
+@media screen and (max-width: 360px) {
+    
+
+    .indicator {
+        width: 50%;
+    }
+    
+}
+
 .indicator.left {
-    left: 5px;
+    left: 0;
 }
 
 .indicator.right {
-    left: 54.45%;
+    left: 100%;
+    transform: translate(-100%, 0);
 }

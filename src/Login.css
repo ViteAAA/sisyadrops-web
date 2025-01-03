@@ -4,6 +4,24 @@
     padding-top: 26px;
 }
 
+
+
+.main-screen {
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+.login-container {
+    padding-top: 26px;
+    position: relative;
+    height: 100%;
+}
+
+.container-outsider {
+    height: 100%;
+}
+
 .nickname-container {
     width: 100%;
 }
@@ -80,6 +98,8 @@
     font-size: 22px;
     color: #4a9ddb;
     align-items: center;
+    
+
 }
 
 .game-button span {
@@ -97,5 +117,6 @@
     background: #0f98e5;
     padding: 14px 0;
     border: none;
-    margin-top: 125px;
+    position: absolute;
+    bottom: 205px;
 }

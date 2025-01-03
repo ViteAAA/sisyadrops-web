@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Case.css';
+import Mark from '../assets/mark.svg';
 
 const Case = ({ title, items, buttonText, displayUs, displaySel, price, postScriptum, background, opacity, last = false, discount, transport, border = {} }) => {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Case = ({ title, items, buttonText, displayUs, displaySel, price, postScri
                 <ul className="case-list">
                     {items.map((item, index) => (
                         <li key={index} className="case-list-item">
-                            <span className="checkmark">✔</span> {item}
+                            <span className="checkmark"><img src={Mark} alt="mark" /></span> {item}
                         </li>
                     ))}
                 </ul>

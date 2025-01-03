@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import "./ConnectScreen.css";
@@ -18,11 +18,17 @@ const Login = () => {
   const [inputColor, setInputColor] = useState('');
   const [inputBack, setInputBack] = useState('');
   const [isValid, setIsValid] = useState(true);
-  const { selectedGame } = useContext(GameContext);
+  const { selectedGame, setSelectedGame } = useContext(GameContext);
 
   const validateNickname = () => {
     return nickname.trim() !== '';
   };
+
+  useEffect(() => {
+    if (!selectedGame) {
+        setSelectedGame('game-1-button'); // Устанавливаем первую игру по умолчанию
+    }
+  }, [selectedGame, setSelectedGame]);
 
   const handleClick = () => {
     if (validateNickname()) {
@@ -48,38 +54,40 @@ const Login = () => {
 
         <div className="divider"></div>
 
-        <div className="container-outsider">
-            <div className="nickname-container">
-                <label htmlFor="nickname" className="nickname-container-label" style={{ color: inputColor }}>{t('nickname_label')}</label>
-                <input
-                    type="text"
-                    id="nickname"
-                    placeholder={t('nickname_placeholder')}
-                    value={nickname}
-                    onChange={(e) => setNickname(e.target.value)}
-                    style={{ borderColor: inputColor, backgroundColor: inputBack }}
-                    className={`nickname-container-input ${isValid ? '' : 'invalid'}`}
-                />
-                <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block' }}>{t('nickname_error')}</label>
-            </div>
+          <div className="container-outsider">
+            <div className="login-container">
+              <div className="nickname-container">
+                  <label htmlFor="nickname" className="nickname-container-label" style={{ color: inputColor }}>{t('nickname_label')}</label>
+                  <input
+                      type="text"
+                      id="nickname"
+                      placeholder={t('nickname_placeholder')}
+                      value={nickname}
+                      onChange={(e) => setNickname(e.target.value)}
+                      style={{ borderColor: inputColor, backgroundColor: inputBack }}
+                      className={`nickname-container-input ${isValid ? '' : 'invalid'}`}
+                  />
+                  <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block' }}>{t('nickname_error')}</label>
+              </div>
 
-            <div className="switch-container">
-                <label className="switch-label">{t('farm_mode_label')}</label>
-                <Switch />
-            </div>
+              <div className="switch-container">
+                  <label className="switch-label">{t('farm_mode_label')}</label>
+                  <Switch />
+              </div>
 
-            <div className="game-container">
-                <p className="game-text">{t("game_text")}</p>
-                <button className="game-button" onClick={() => navigate('/game')}>
-                    {t(selectedGame)}
-                    <span><img src={arrowBtn} alt="arrow" /></span>
-                </button>
-            </div>
+              <div className="game-container">
+                  <p className="game-text">{t("game_text")}</p>
+                  <button className="game-button" onClick={() => navigate('/game')}>
+                      {t(selectedGame)}
+                      <span><img src={arrowBtn} alt="arrow" /></span>
+                  </button>
+              </div>
 
-            <button className="complite-button" onClick={handleClick}>
-                {t('continue_button')}
-            </button>
-        </div>
+              <button className="complite-button" onClick={handleClick}>
+                  {t('continue_button')}
+              </button>
+            </div>
+          </div>
     </div>
   );
 }

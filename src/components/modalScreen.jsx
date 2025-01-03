@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './ModalScreen.css';
 
 const ModalScreen = ({ isOpen, onClose, onConfirm }) => {
+
+    const { t } = useTranslation();
 
     if (!isOpen) {
         return null;
@@ -11,11 +14,11 @@ const ModalScreen = ({ isOpen, onClose, onConfirm }) => {
         <div className="modal">
             <div className="modal-content">
                 <div className="modal-inside">
-                    <h2>Вы действительно хотите отключить аккаунт?</h2>
-                    <p>Для его восстановления нужно будет снова совершить авторизацию.</p>
+                <h2>{t('modal_title')}</h2>
+                    <p>{t('modal_text')}</p>
                     <div className="modal-button-container">
-                        <button className="modal-cancel-button" onClick={onClose}>Отмена</button>
-                        <button className="modal-confirm-button" onClick={onConfirm}>Отключить</button>
+                        <button className="modal-cancel-button" onClick={onClose}>{t('modal_cancel_button')}</button>
+                        <button className="modal-confirm-button" onClick={onConfirm}>{t('modal_confirm_button')}</button>
                     </div>
                 </div>
             </div>

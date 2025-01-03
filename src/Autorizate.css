@@ -1,6 +1,17 @@
   .auth-container {
-    padding-top: 150px;
-    margin-bottom: 200px;
+    width: 100%;
+  }
+
+  .auth-box {
+    height: 100vh;
+    position: relative;
+  }
+
+  .auth-justify {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
   }
 
   .container-outsider .auth-title {
@@ -40,6 +51,11 @@
     font-size: 24px;
     color: #4ab3ff;
   }
+
+  .code-container-href img {
+    margin-top: 50%;
+    transform: translateY(0, -50%);
+  }
   
   .code {
     font-family: monospace;
@@ -54,7 +70,9 @@
   .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 34px;
+    width: 100%;
   }
   
   .help-button,

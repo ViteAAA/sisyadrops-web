@@ -9,7 +9,7 @@ import { GameContext } from './GameContext';
 const ListOfGames = ({setInputValue,/* isStreamerNotExist,*/ setIsInputActive, isActive, errBool}) => {
   const { t } = useTranslation();
   // Состояния для хранения активности
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState(0);
 
   const { setSelectedGame } = useContext(GameContext);
 
@@ -19,6 +19,7 @@ const ListOfGames = ({setInputValue,/* isStreamerNotExist,*/ setIsInputActive, i
     'game-3-button',
     'game-4-button',
   ];
+
 
   // Обработчик клика по кнопке
   const handleButtonClick = (id, ClassOfText) => {

@@ -70,7 +70,8 @@
   "auth_code": "GPRLPWRM",
   "auth_href": "twitch.tv/activate",
   "auth_text": "И авторизируйтесь с ним на странице активации твича:",
-  "twitch_auth": "Авторизация в Twitch",
+  "auth_connect": "Чтобы завершить подключение, скопируйте этот код",
+  "twitch_auth": "Авторизация на Twitch",
   "help_button": "Помощь",
   "cancel_button": "Отмена",
 
@@ -104,5 +105,10 @@
   "another-game-placeholder":"Никнейм или ссылка",
   "another-game-streamer-does-not-exist-third":"Стримера с таким никнеймом не существует",
 
-  "save-button":"Сохранить"
+  "save-button":"Сохранить",
+
+  "modal_title": "Вы действительно хотите отключить аккаунт?",
+  "modal_text": "Для его восстановления нужно будет снова совершить авторизацию.",
+  "modal_cancel_button": "Отмена",
+  "modal_confirm_button": "Отключить"
 }
