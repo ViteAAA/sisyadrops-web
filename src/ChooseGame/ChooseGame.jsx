@@ -17,7 +17,7 @@ export default function ChooseGame(){
     const handleConnect = () => {
         console.log(isInputActive);
         console.log(errBool);
-        if (isInputActive && inputValue) {
+        if (isInputActive && (inputValue === 'red' || inputValue === '')) {
             // Применяем стиль для неверного имени
             //checkExist(true);
             console.log(`Попытка подключения к ${inputValue}`);
@@ -26,7 +26,7 @@ export default function ChooseGame(){
             setErrBool(true);
             console.log(errBool);
 
-            navigate('/login');
+            // navigate('/login');
             
             // Здесь будет логика подключения
         }

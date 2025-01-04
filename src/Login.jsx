@@ -131,7 +131,7 @@ const Login = () => {
       setActiveClass('input-accounts');
       console.log("We have this username in your account");
     } else if (nickname.trim() === '') {
-      setInputBack('rgba(190, 126, 254, 0.1)');
+      setInputBack('rgba(219, 74, 74, 0.1)');
       setInputColor('#db4a4a');
       setIsHaveThisUsername(true);
       setEmptyNickname('#be7efe');
@@ -166,7 +166,7 @@ const Login = () => {
                     placeholder={t('nickname_placeholder')}
                     value={nickname}
                     onChange={(e) => setNickname(e.target.value)}
-                    style={{ borderColor: inputColor, backgroundColor: inputBack }}
+                    style={{ borderColor: inputColor, backgroundColor: inputBack, color: inputColor }}
                     className={`nickname-container-input ${isValid ? '' : 'invalid'}, ${activeClass}`}  
                 />
                   <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block', color: inputColor }}>{instucction}</label>

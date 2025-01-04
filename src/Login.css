@@ -5,7 +5,7 @@
 }
 
 .login-info-box {
-    margin-left: 7.135% !important;
+    margin-left: 5% !important;
     width: 90%;
 }
 
@@ -59,6 +59,7 @@
     font-weight: 500;
     font-size: 22px;
     color: rgba(74, 157, 219);
+    /* color: #fff; */
     width: 100%;
     box-sizing: border-box;
     outline: none; /* Убирает стандартное выделение */
@@ -76,13 +77,26 @@
 .input-invalid:focus {
     border: 3px solid #4a9ddb;
 }
+.input-invalid::placeholder {
+    color: rgba(219, 74, 74, 0.39); /* Цвет для невалидного состояния */
+}
 
 .input-account:focus {
     border: 3px solid #4a9ddb;
 }
 
+.input-account {
+    color: #fff !important;
+}
+
+
 .input-empty:focus {
     border: 3px solid #4a9ddb;
+    
+}
+.input-empty::placeholder {
+    color: rgba(219, 74, 74, 0.39); /* Цвет для невалидного состояния */
+    
 }
 
 .nickname-container-input.invalid::placeholder {

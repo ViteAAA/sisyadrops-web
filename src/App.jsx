@@ -6,7 +6,7 @@ import MainScreen from './MainScreen.jsx';
 import StoriesPage from './StoriesPage.jsx';
 import Login from './Login.jsx';
 import Access from './Access.jsx'
-import Autorizate from './Autorizate.jsx';
+import Authorization from './Authorization.jsx';
 import Accaunt from './Account.jsx';
 import Game from './ChooseGame/ChooseGame.jsx';
 import Support from './TechScreens/TechScreen.jsx';
@@ -30,8 +30,8 @@ const AnimatedRoutes = () => {
                         <Route path="/connectScreen" element={<ConnectScreen />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/access" element={<Access />} />
-                        <Route path="/autorizate" element={<Autorizate />} />
-                        <Route path="/accaunt" element={<Accaunt />} />
+                        <Route path="/authorization" element={<Authorization />} />
+                        <Route path="/account" element={<Accaunt />} />
                         <Route path="/game" element={<Game />} />
                         <Route path="/support" element={<Support />} />
                     </Routes>

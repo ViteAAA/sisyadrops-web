@@ -38,7 +38,7 @@ const Access = () => {
                                 postScriptum={t('classic_post_scriptum')}
                                 background="linear-gradient(135deg, #03b3ff 0%, #5a31ff 100%)"
                                 opacity="0.09"
-                                transport="/autorizate"
+                                transport="/authorization"
                             />
                             <Case
                                 title={t('gold_title')}
@@ -74,7 +74,7 @@ const Access = () => {
                                 price={t('business_price')}
                                 postScriptum={t('business_post_scriptum')}
                                 background="linear-gradient(145deg, rgba(237, 36, 255, 0.08) 0%, rgba(74, 5, 221, 0.08) 100%)"
-                                displaySel="block"
+                                displayUs="block"
                             />
                             <Case
                                 title={t('factory_title')}

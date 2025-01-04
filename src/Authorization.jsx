@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import './Autorizate.css';
+import './Authorization.css';
 
 import Copy from './assets/copy.svg';
 import Href from './assets/href.svg';

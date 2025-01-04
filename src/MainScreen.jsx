@@ -91,7 +91,7 @@ const MainScreen = () => {
     };
 
     const handleAccauntButtonClick = (username, date) => {
-        navigate('/accaunt', { state: { username, date } });
+        navigate('/account', { state: { username, date } });
     };
 
     const handleConnectButtonClick = (connectScreen) => {
