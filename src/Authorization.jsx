@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import './Authorization.css';
@@ -10,23 +10,34 @@ const Autorizate = () => {
     
     const navigate = useNavigate();
 
+    const [ selectText, setSelectText ] = useState(false);
+
     const clikcButtonCancel = () => {
+        setSelectText(false);
         navigate('/');
     }
 
     const clickButtonHelp = () => {
         navigate('/support', { state: "3" });
+        setSelectText(false);
     }
     
     const copyText = (text) => {
         navigator.clipboard.writeText(text);
+        setSelectText(false);
     }
+
+    const select = (text) => {
+        navigator.clipboard.writeText(text);
+        setSelectText(true);
+    }
+    
 
     const { t } = useTranslation();
 
 
     return (
-        <div className="container-outsider">
+        <div className="container-outsider ">
             <div className="auth-box">
                 <div className="auth-justify">
                     <div className="auth-container">
@@ -37,8 +48,12 @@ const Autorizate = () => {
                             <img src={Copy} alt="copy" />
                         </button>
                         <p>{t("auth_text")}</p>
-                        <button className="code-container" onClick={() => copyText('twich.tv/activate')}>
-                            <span className="code">{t("auth_href")}</span>
+                        <button 
+                            className="code-container"
+                            onClick={() => 
+                                select('twich.tv/activate')
+                            }>
+                            <span className="code" style={{ background: selectText ? 'blue' : 'none' }}>{t("auth_href")}</span>
                             <a className="code-container-href" href="https://www.twitch.tv/activate"><img src={Href} alt="href" /></a>
                         </button>
                     </div>

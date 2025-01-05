@@ -45,11 +45,11 @@ const Account = () => {
                         </div>
                     </div>
                     <p className="connected-time">{date}</p>
-                    <a href="https://www.twitch.tv/drops/inventory"><button className="progress-button">{t("account_progress")}</button></a>
-                    <button className="disconnect-button" onClick={hanleClickModal}>{t("account_disconnect")}</button>
+                    <a  href="https://www.twitch.tv/drops/inventory"><button id="defoult-style" className="progress-button">{t("account_progress")}</button></a>
+                    <button className="disconnect-button" id="defoult-style" onClick={hanleClickModal}>{t("account_disconnect")}</button>
                 </div>
             </div>
-            <button className="back-button" onClick={handleConfirm}>{t("account_back_button")}</button>
+            <button className="back-button" id="defoult-style" onClick={handleConfirm}>{t("account_back_button")}</button>
         </div>
     );
 };

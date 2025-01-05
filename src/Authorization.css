@@ -91,19 +91,20 @@
     font-size: 24px;
     color: #0f98e5;
     border: none;
-    padding: 21px 37px 19px 38px;
+    padding: 21px 19px;
     border-radius: 20px;
     cursor: pointer;
     position: relative;
+    width: 44.147%;
   }
 
-  .help-button {
+  /* .help-button {
     margin-right: 10px;
   }
 
   .cancel-button {
     margin-left: 10px;
-  }
+  } */
   
 .help-button div,
 .cancel-button div {

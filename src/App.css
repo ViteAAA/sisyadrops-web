@@ -9,6 +9,8 @@
   transition: transform 260ms ease-in-out; /* Плавный переход за 260 миллисекунд с эффектом ease-in-out */
 }
 
+
+
 /* Стили для анимации выхода элемента с экрана */
 .slide-exit {
   transform: translateY(0); /* Начальное состояние: элемент на экране */
